@@ -42,7 +42,7 @@ const uploadFile = async function (file) {
         }
         s3.upload(uploadParams, function (err, data) {
             if (err) {
-                return reject({ "Error": err })
+                return reject({ "Error": err }) 
             }
             console.log("file uploaded succesfully")
             return resolve(data.Location)
